@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .section-min-height {
+        /* 68px based on text-3xl(36px) and p-4(32px) in header */
+        min-height: calc(100vh-68px);
+    }
+
+    .toggle-btn {
+        /* Child selector */
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+    }
+}
